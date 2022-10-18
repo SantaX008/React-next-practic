@@ -1,7 +1,9 @@
 import React from 'react';
+
 import Hero from '@/components/Hero/Hero';
 import { hero } from '@/data/hero';
-import styles from "@/components/HeroAdvantage/HeroAdvantage.module.scss";
+
+import styles from './HeroAdvantage.module.scss';
 
 const HeroAdvantage = () => {
   return (

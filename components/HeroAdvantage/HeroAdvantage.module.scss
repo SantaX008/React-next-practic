@@ -1,3 +1,5 @@
+@import "@/styles/config/variables";
+
 $color-invalid : #f36969;
 $color-invalid-bg : #f8443e;
 $color-select-border : #e1e1e1;
@@ -7,7 +9,7 @@ $color-select-border : #e1e1e1;
   color: $color-white-bg;
 
   @media (min-width: $media-tablet) {
-    background: url(/public/img/decorative_bg.png), $color-text-dark repeat;
+    background: $color-text-dark url("/img/decorative_bg.png") repeat;
   }
 
   .container {

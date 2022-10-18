@@ -1,13 +1,13 @@
-import '@/styles/globals.scss';
 import React from 'react';
-import HeroAdvantage from '@/components/HeroAdvantage/HeroAdvantage';
 import Head from 'next/head';
+
+import HeroAdvantage from '@/components/HeroAdvantage/HeroAdvantage';
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>DL Ready for Use WEBSITES</title>
+        <title>Reliable Austin Plumbers at Indigo Home & Facility Services</title>
       </Head>
       <HeroAdvantage />
     </>

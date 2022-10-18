@@ -1,0 +1,47 @@
+@import "@/styles/config/ui";
+
+.Block {
+  text-align: center;
+}
+
+.TitleH1 {
+  @include ui-title-landing-h1;
+
+  text-transform: uppercase;
+
+  &_Decorative {
+    @include ui-title-landing-h1-decorative;
+  }
+}
+
+.TitleH2 {
+  @include ui-title-landing-h2;
+}
+
+.TitleH3 {
+  @include ui-title-landing-h3;
+}
+
+.TitleH4 {
+  @include ui-title-landing-h4;
+}
+
+.Text {
+  @include ui-text;
+
+  &_Medium {
+    @include ui-text-medium;
+  }
+}
+
+.Link {
+  @include ui-link;
+}
+
+.Decorative3 {
+  @include ui-decorative-3;
+}
+
+.Decorative4 {
+  @include ui-decorative-4;
+}

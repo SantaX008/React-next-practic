@@ -1,0 +1,42 @@
+/*
+  System font stack used as base sans-serif and monospace
+  https://css-tricks.com/snippets/css/system-font-stack/
+*/
+$font-serif-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+/*
+  Themes fonts
+*/
+$font-base-family: "Lato", $font-serif-family;
+$font-decorative-family: "Poppins", $font-serif-family;
+
+$font-base-size-unit: 18;
+$font-base-size: 18px;
+
+/*
+* Breakpoints
+*/
+$media-tablet: 768px;
+$media-tablet-landscape: 1024px;
+$media-desktop: 1400px;
+
+/*
+* Colors
+*/
+$color-text-light: #fff;
+$color-text-dark: #192957;
+$color-white-bg: #fff;
+$color-white-dark: #eceff5;
+$color-gray: #c7c7c7;
+$color-blue: #204ab6;
+$color-blue-light: #7390da;
+$color-blue-dark: #060f28;
+$color-orange: #f5a623;
+$color-yellow: #ffc700;
+$color-yellow-light: #ffe27a;
+$color-scroll-bar: #828ca6;
+$color-blue-testimonials: #4286f5;
+$color-red-testimonials: #ea4235;
+$color-yellow-testimonials: #fabc05;
+$color-green-testimonials: #34a853;

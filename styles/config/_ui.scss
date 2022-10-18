@@ -1,0 +1,226 @@
+@import "variables";
+
+/**
+ *
+ * CONTENTS
+ *
+ * LAYOUT
+ * System ............... Style resets. Margins, paddings & other sizes for common sections
+ *
+ *
+ * TYPOGRAPHY
+ * Headings ............. H1–H6 classes & mixins
+ * Text ................. Text classes & mixins
+ *
+ */
+
+/**
+ *
+ * System
+ *
+ */
+
+@mixin no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin no-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin ui-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media (min-width: $media-tablet-landscape) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@mixin ui-section-animation {
+  @media (min-width: $media-tablet-landscape) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
+/**
+*
+* Headings. H1–H6 classes & mixins
+* - H1 Main Decorative
+* - H1 Internal page
+* - H2 Title
+* - H3 Title
+* - H4 Sub title
+* - H5 Card preview title
+* - H6 Card sub-title
+*
+* Text.
+* - Paragraph
+* - Card description
+* - Tags, categories
+* - Link
+*
+*/
+
+@mixin ui-title {
+  font-family: $font-base-family;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin ui-decorative {
+  font-family: $font-decorative-family;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Landing/H1 */
+@mixin ui-title-landing-h1 {
+  @include ui-title;
+
+  font-size: 70px;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on;
+  line-height: calc(77 / 70);
+
+  @media (min-width: $media-tablet) {
+    font-size: 120px;
+  }
+}
+
+/* Landing/H1 Decorative */
+@mixin ui-title-landing-h1-decorative {
+  @include ui-title-landing-h1;
+  @include ui-decorative;
+}
+
+/* Landing/H2 */
+@mixin ui-title-landing-h2 {
+  @include ui-title;
+
+  font-size: 35px;
+  font-weight: 500;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on;
+  line-height: calc(42 / 35);
+  text-transform: uppercase;
+
+  @media (min-width: $media-tablet) {
+    font-size: 60px;
+  }
+}
+
+/* Landing/H3 */
+@mixin ui-title-landing-h3 {
+  @include ui-title;
+
+  font-size: 25px;
+  font-weight: 500;
+  line-height: calc(35 / 25);
+  text-transform: uppercase;
+
+  @media (min-width: $media-tablet) {
+    font-size: 35px;
+  }
+}
+
+/* Landing/H4 */
+@mixin ui-title-landing-h4 {
+  @include ui-title;
+
+  font-weight: 500;
+  font-size: 25px;
+  line-height: calc(38 / 25);
+  text-transform: uppercase;
+
+  @media (min-width: $media-tablet) {
+    font-size: 30px;
+  }
+}
+
+/* Landing/Text */
+@mixin ui-text {
+  font-family: $font-base-family;
+  font-size: $font-base-size;
+  line-height: calc(22 / 16);
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on;
+
+  @media (min-width: $media-tablet) {
+    font-size: 20px;
+  }
+}
+
+/* Landing/Text Medium */
+@mixin ui-text-medium {
+  @include ui-text;
+
+  font-weight: 500;
+}
+
+/* Landing/Link */
+@mixin ui-link {
+  @include ui-text;
+
+  color: $color-txt_2;
+  text-decoration-line: underline;
+  transition: color $transition-time;
+
+  &:hover {
+    color: $color-txt_3;
+  }
+}
+
+/* Landing/Decorative 3 */
+@mixin ui-decorative-3 {
+  @include ui-decorative;
+
+  font-size: 30px;
+  line-height: calc(33 / 30);
+
+  @media (min-width: $media-tablet) {
+    font-size: 40px;
+  }
+}
+
+/* Landing/Decorative 4 */
+@mixin ui-decorative-4 {
+  @include ui-decorative;
+
+  font-size: 60px;
+  line-height: calc(72 / 60);
+
+  @media (min-width: $media-tablet) {
+    font-size: 80px;
+  }
+}
+
+/* Landing/CTA Button */
+@mixin ui-text-button {
+  @include ui-text-medium;
+
+  text-decoration: none;
+}
+
+@keyframes opacity {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@mixin blot-animation {
+  animation: opacity 3s infinite;
+}

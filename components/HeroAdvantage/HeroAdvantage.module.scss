@@ -1,0 +1,44 @@
+$color-invalid : #f36969;
+$color-invalid-bg : #f8443e;
+$color-select-border : #e1e1e1;
+
+.mainAdvantageForm {
+  background: none;
+  color: $color-white-bg;
+
+  @media (min-width: $media-tablet) {
+    background: url(/public/img/decorative_bg.png), $color-text-dark repeat;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $media-tablet) {
+      flex-direction: row;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      justify-content: center;
+    }
+  }
+
+  .wrapper {
+    display: contents;
+
+    @media (min-width: $media-tablet) {
+      display: block;
+      width: 100%;
+      max-width: 1220px;
+    }
+  }
+
+  .btn {
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  .btn-wrapper {
+    margin: -5px 0;
+  }
+}

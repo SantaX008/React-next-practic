@@ -1,0 +1,67 @@
+@import "/styles/config/variables";
+@import "/styles/UI.module";
+
+.Burger {
+  position: relative;
+  width: 40px;
+  height: 13px;
+  cursor: pointer;
+  background: transparent;
+  color: $color-white-bg;
+  transition: border-bottom 0.35s ease-in, transform 0.35s ease-in;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid $color-white-bg;
+  transform-origin: bottom;
+  z-index: 5;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid $color-white-bg;
+    transition: border-bottom 0.35s ease-in, transform 0.35s ease-in;
+    transform-origin: center;
+  }
+
+  &::after {
+    bottom: 5px;
+  }
+
+  &::before {
+    bottom: 11px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $color-orange;
+
+    &::after,
+    &::before {
+      border-bottom: 1px solid $color-orange;
+    }
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    display: none;
+  }
+}
+
+.IsOpenedMenu {
+  border-bottom: 1px solid transparent;
+  transform: scale(0.6);
+
+  &::after,
+  &::before {
+    border-bottom: 5px solid $color-text-dark;
+  }
+
+  &::after {
+    transform: rotate(45deg) translate(-3px, -5px);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}

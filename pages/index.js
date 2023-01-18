@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
-import HeroAdvantage from '@/components/HeroAdvantage/HeroAdvantage';
+import Header from '@/components/Header/Header';
+import HeroAdvantageForm from '@/components/HeroAdvantageForm/HeroAdvantageForm';
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Head>
         <title>Reliable Austin Plumbers at Indigo Home & Facility Services</title>
       </Head>
-      <HeroAdvantage />
+      <Header />
+      <HeroAdvantageForm />
     </>
   );
 }

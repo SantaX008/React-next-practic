@@ -1,7 +1,22 @@
-@import "@/styles/config/ui";
+@import "/styles/config/ui";
 
 .Block {
   text-align: center;
+  padding: 40px 0;
+
+  @media (min-width: $media-tablet) {
+    padding: 50px 0;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    padding: 60px 0;
+  }
+}
+
+.Container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1220px;
 }
 
 .TitleH1 {

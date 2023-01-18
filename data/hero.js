@@ -1,9 +1,6 @@
 export const hero = {
-  title: 'Top-Notch Electrical & Plumbing Services From a Reputed Local Company',
+  title: 'Top Local Austin Plumbers - Quick Response Time',
   description:
-    'You can safely rely on our one-stop team for electrical or plumbing services, as well as construction and remodeling. You start projects - we provide solutions that work best for your home.',
-  image: {
-    png: '/public/img/png/main.png',
-    webp: '/public/img/webp/main.webp'
-  }
+    'You can rely on our Austin plumbers & electricians for all types of repair and maintenance jobs around the house. Schedule immediate service right now. Fast response time & upfront prices guaranteed!',
+  image: '/img/main.png'
 };

@@ -2,7 +2,8 @@
   System font stack used as base sans-serif and monospace
   https://css-tricks.com/snippets/css/system-font-stack/
 */
-$font-serif-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-serif-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 /*
@@ -40,3 +41,6 @@ $color-blue-testimonials: #4286f5;
 $color-red-testimonials: #ea4235;
 $color-yellow-testimonials: #fabc05;
 $color-green-testimonials: #34a853;
+$color-invalid : #f36969;
+$color-invalid-bg : #f8443e;
+$color-select-border : #e1e1e1;

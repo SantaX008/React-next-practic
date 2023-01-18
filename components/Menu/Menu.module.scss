@@ -1,0 +1,111 @@
+@import "/styles/config/variables";
+@import "/styles/UI.module";
+@import "/components/Menu/Burger.module";
+
+.Menu {
+  @media (min-width: $media-tablet-landscape) {
+    display: inline-block;
+  }
+}
+
+.MainMenu {
+  color: $color-white-bg;
+  position: absolute;
+  transform: scale(0);
+  opacity: 0;
+  background: #eceff5;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 95px;
+  padding-bottom: 25px;
+  overflow-x: hidden;
+  z-index: 3;
+
+  @media (min-width: $media-tablet-landscape) {
+    position: relative;
+    transform: none;
+    opacity: 1;
+    background: transparent;
+    height: auto;
+    width: auto;
+    left: 0;
+    top: 0;
+    padding: 0;
+    overflow-x: visible;
+    transition: none;
+  }
+}
+
+.MenuList {
+  @include no-list;
+
+  margin: 0 -10px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $media-tablet-landscape) {
+    flex-direction: row;
+  }
+}
+
+.MenuItem {
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 14px 0;
+  cursor: pointer;
+
+  @media (min-width: $media-tablet-landscape) {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+
+    &:hover,
+    &:focus-within {
+      color: $color-orange;
+    }
+
+    &.Active {
+      color: $color-orange;
+      pointer-events: none;
+    }
+  }
+}
+
+.MenuBox {
+  flex: 0 0 80px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $media-tablet-landscape) {
+    flex: none;
+    display: initial;
+  }
+}
+
+.Link {
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0;
+  color: $color-white-bg;
+  transition: color 0.35s ease-in;
+  text-decoration: none;
+  outline: none;
+
+  @media (min-width: $media-tablet-landscape) {
+    padding: 5px;
+
+    &:focus,
+    &:hover {
+      color: $color-orange;
+    }
+  }
+}
+
+.Info {
+  display: none;
+}

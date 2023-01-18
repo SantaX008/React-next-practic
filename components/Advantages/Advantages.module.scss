@@ -1,0 +1,97 @@
+@import "/styles/config/variables";
+@import "/styles/UI.module";
+
+.Advantages {
+  background-color: $color-white-bg;
+  color: $color-text-dark;
+  position: relative;
+  padding-top: 15px;
+  order: 1;
+
+  @media (min-width: $media-tablet) {
+    padding: 40px 0;
+    order: 0;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    padding: 60px 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 150vw;
+    height: 100%;
+    position: absolute;
+    left: -50vw;
+    bottom: 0;
+    background-color: $color-white-bg;
+  }
+
+  &.NoJs {
+    .List {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 20px;
+
+      @media (min-width: $media-tablet) {
+        flex-wrap: wrap;
+        overflow: visible;
+      }
+
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $color-scroll-bar;
+        border-radius: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-text-dark;
+        border-radius: 5px;
+      }
+
+      .Item {
+        @media (max-width: $media-tablet) {
+          flex: 0 0 50%;
+        }
+      }
+    }
+  }
+}
+
+.Title {
+  font-family: $font-decorative-family;
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: bold;
+  max-width: 580px;
+  margin-top: 0;
+  margin-bottom: 27px;
+  text-transform: capitalize;
+
+  @media (min-width: $media-tablet) {
+    font-size: 26px;
+    line-height: 31px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 27px;
+  }
+}
+
+.Container {
+  position: relative;
+  padding-right: 0;
+
+  @media (min-width: $media-tablet) {
+    padding-right: 20px;
+    max-width: 580px;
+  }
+}

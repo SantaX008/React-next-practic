@@ -1,0 +1,76 @@
+@import "/styles/config/variables";
+@import "/styles/UI.module";
+
+.AdvantagesList {
+  @include no-list();
+
+  margin: 0 -10px;
+
+  @media (min-width: $media-tablet) {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    max-width: 580px;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    flex-direction: row;
+  }
+}
+
+.Item {
+  position: relative;
+  margin: 0 10px;
+
+  @media (min-width: $media-tablet-landscape) {
+    width: calc((100% - (2 * 20px)) / 2);
+
+    &:nth-child(n+3) {
+      margin-top: 30px;
+    }
+  }
+
+  svg {
+    stroke: $color-blue;
+    fill: none;
+  }
+
+  &:not(:last-child) {
+    @media (min-width: $media-tablet) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ItemTitle {
+  font-family: $font-decorative-family;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+
+  @media (min-width: $media-tablet) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+
+.ItemDescription {
+  font-size: 15px;
+  line-height: 22px;
+
+  @media (min-width: $media-tablet-landscape) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}

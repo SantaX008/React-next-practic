@@ -172,12 +172,12 @@
 @mixin ui-link {
   @include ui-text;
 
-  color: $color-txt_2;
+  color: $color-text-dark;
   text-decoration-line: underline;
-  transition: color $transition-time;
+  transition: color 0.35s ease-in;
 
   &:hover {
-    color: $color-txt_3;
+    color: $color-orange;
   }
 }
 
@@ -210,17 +210,4 @@
   @include ui-text-medium;
 
   text-decoration: none;
-}
-
-@keyframes opacity {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-@mixin blot-animation {
-  animation: opacity 3s infinite;
 }

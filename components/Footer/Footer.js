@@ -1,8 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import FooterMenu from '@/components/Footer/FooterMenu';
 import SocialMedia from '@/components/SocialMedia/SocialMedia';
 import { footer } from '@/data/footer';
+import { footerMenu } from '@/data/footerMenu';
 import { socialMedia } from '@/data/socialMedia';
 
 import styles from './Footer.module.scss';
@@ -11,6 +13,7 @@ const Footer = () => {
   return (
     <footer className={styles.Footer}>
       <div className={styles.Container}>
+        <FooterMenu list={footerMenu}></FooterMenu>
         <div className={styles.FooterMainInfo}>
           <SocialMedia social={socialMedia}></SocialMedia>
           <div className={styles.Wrapper}>

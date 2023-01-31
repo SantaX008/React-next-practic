@@ -12,13 +12,13 @@ const Menu = props => {
     <section className={styles.MenuBox}>
       <nav className={classNames(styles.Menu, styles.MainMenu)}>
         <ul className={styles.MenuList}>
-          {list.map(item => {
+          {list.map(item => (
             <li key={item.id} className={styles.MenuItem}>
               <a className={styles.Link} href={item.url}>
                 {item.name}
               </a>
-            </li>;
-          })}
+            </li>
+          ))}
         </ul>
       </nav>
       <button className={burger.Burger} id={burger.Burger}></button>

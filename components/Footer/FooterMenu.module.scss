@@ -1,0 +1,36 @@
+@import "/styles/config/variables";
+@import "/styles/UI.module";
+
+.FooterMenu {
+  overflow: hidden;
+  display: block;
+}
+
+.MenuList {
+  @include no-list;
+
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+
+  @media (min-width: $media-tablet) {
+    margin: 0 -15px 35px;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    margin: 0 -27px 43px;
+  }
+}
+
+.MenuItem {
+  margin-top: 25px;
+  padding: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  @media (min-width: $media-tablet-landscape) {
+    margin-left: 27px;
+    margin-right: 27px;
+  }
+}

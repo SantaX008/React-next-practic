@@ -4,6 +4,7 @@
 .HeroAdvantageForm {
   background: none;
   color: $color-white-bg;
+  overflow: hidden;
 
   @media (min-width: $media-tablet) {
     background: $color-text-dark url("/img/decorative_bg.png") repeat;
@@ -11,20 +12,10 @@
 }
 
 .Container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: 1220px;
   padding: 0 20px;
   margin: 0 auto;
-
-  @media (min-width: $media-tablet) {
-    flex-direction: row;
-  }
-
-  @media (min-width: $media-tablet-landscape) {
-    justify-content: flex-start;
-  }
 }
 
 .BtnWrapper {

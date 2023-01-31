@@ -1,0 +1,56 @@
+@import "/styles/config/variables";
+@import "/styles/UI.module";
+
+$icon-size: 30px;
+
+.socialMediaList {
+  @include no-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  margin: 20px -10px 20px;
+
+  @media (min-width: $media-tablet) {
+    flex: 1 0 350px;
+    margin: -10px;
+  }
+
+  @media (min-width: $media-desktop) {
+    flex: 1 0 250px;
+  }
+}
+
+
+.Item {
+  display: inline-block;
+  opacity: 1;
+  vertical-align: middle;
+  position: relative;
+  margin: 10px;
+}
+
+.ItemLink {
+  display: flex;
+  width: $icon-size;
+  height: $icon-size;
+  left: 0;
+  top: 0;
+  font-size: 0;
+  background-color: #1a367e;
+  border-radius: 50%;
+  transition: background-color 0.35s ease-in;
+
+  &:hover,
+  &:focus {
+    background-color: $color-yellow;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-yellow-light;
+  }
+}

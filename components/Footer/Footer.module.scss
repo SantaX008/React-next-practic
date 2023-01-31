@@ -1,0 +1,126 @@
+@import "/styles/config/variables";
+@import "/styles/UI.module";
+
+.Footer {
+  color: $color-text-light;
+  background: $color-blue-dark;
+  padding: 15px 0 40px;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (min-width: $media-tablet) {
+    padding: 25px 0 30px;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    padding: 8px 0 25px;
+    font-size: $font-base-size;
+    line-height: 27px;
+  }
+}
+
+.FooterMainInfo {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $media-tablet) {
+    padding-bottom: 71px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    padding: 8px 0 25px;
+  }
+}
+
+.Wrapper {
+  display: flex;
+  flex: 1 1 100%;
+
+  @media (min-width: $media-tablet) {
+    margin: 0 40px;
+  }
+
+  @media (max-width: $media-tablet-landscape) {
+    flex-direction: column;
+  }
+}
+
+.Inner {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $media-tablet-landscape) {
+    margin-right: 40px;
+  }
+
+  @media (max-width: $media-tablet-landscape) {
+    flex: 0 0 auto;
+  }
+}
+
+.Mail,
+.Phone {
+  height: 100%;
+}
+
+.Link {
+  display: inline-block;
+  color: $color-text-light;
+  text-decoration: none;
+  outline: none;
+  transition: color 0.35s ease-in,
+  opacity 0.35s ease-in;
+
+  @media (max-width: $media-tablet-landscape) {
+    margin-bottom: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-orange;
+  }
+}
+
+.Info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 30px;
+
+  @media (min-width: $media-tablet) {
+    margin-top: 25px;
+    flex-direction: row;
+  }
+}
+
+.InfoItem {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $media-tablet) {
+    &:not(:first-child):not(:last-child) {
+      padding: 0 40px;
+    }
+  }
+}
+
+.Opacity {
+  opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    color: $color-orange;
+    outline: none;
+  }
+
+  &.Active {
+    color: $color-orange;
+    pointer-events: none;
+    opacity: 1;
+  }
+}

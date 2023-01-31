@@ -1,5 +1,5 @@
 export const headerMenu = {
-  menuItems: [
+  menuList: [
     {
       name: 'Service',
       url: '/service/'

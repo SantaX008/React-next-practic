@@ -9,7 +9,7 @@ const Hero = props => {
 
   return (
     <section className={styles.Hero}>
-      <div className={styles.Container}>
+      <div className={styles.Info}>
         <Image className={styles.Image} src={image} height={377} width={580} alt="" />
         <h1 className={styles.Title}>{title}</h1>
         <p className={styles.Description}>{description}</p>

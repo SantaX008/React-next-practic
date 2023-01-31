@@ -1,6 +1,8 @@
 import React from 'react';
 
+import Menu from '@/components/Menu/Menu';
 import { header } from '@/data/header';
+import { headerMenu } from '@/data/menu';
 
 import styles from './Header.module.scss';
 
@@ -12,7 +14,7 @@ const Header = () => {
           <svg className={styles.Logo} width={header.width} height={header.height}>
             <use xlinkHref={header.logo}></use>
           </svg>
-          {/*<Menu {...headerMenu} />*/}
+          <Menu list={headerMenu.menuList} />
         </div>
       </div>
     </header>
